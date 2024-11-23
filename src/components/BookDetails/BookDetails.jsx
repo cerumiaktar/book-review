@@ -10,10 +10,10 @@ const BookDetails = () => {
     const { id } = useParams();
     const idInt = parseInt(id)
     const book = books.find(book => book.id === idInt)
-    console.log(book, id);
+    console.log(book);
     
     const handleToast = () =>{
-        saveBook(id);
+        saveBook(idInt);
         toast("Books Added to Read List");
     }
 
